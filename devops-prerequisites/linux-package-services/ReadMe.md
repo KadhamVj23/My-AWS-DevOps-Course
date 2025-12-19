@@ -43,19 +43,19 @@ To start that service you run the service start command and providing the servic
 **sudo service httpd start** -> starts the httpd service or you can use the newer command that is below
 
 **sudo sytemctl start httpd** -> starts httpd service
-![Start Service](screenshots/start-service.png)
+![Start Service](Screenshots/start-service.png)
 
 **sudo systemctl stop httpd** -> stops httpd service
-![Stop Service](screenshots/stop-service.png)
+![Stop Service](Screenshots/stop-service.png)
 
 **sudo systemctl status httpd** -> check the status of a service
-![Check Service Status](screenshots/status-service.png)
+![Check Service Status](Screenshots/status-service.png)
 
 **sudo systemctl enable httpd** -> configure httpd to start automatically when the system reboots
-![Enable Service](screenshots/enable-service.png)
+![Enable Service](Screenshots/enable-service.png)
 
 **sudo systemctl disable httpd** -> configure httpd not to start at startup(to disable the service)
-![Disable Service](screenshots/disable-service.png)
+![Disable Service](Screenshots/disable-service.png)
 
 Once services are configured it is so convenient to the administrators to start, stop or enable the services
 
@@ -128,4 +128,4 @@ Restart=always
 
 
 To check the service configuration file you can use this command to know what is run when: **systemctl cat app.service** --> You will get to know which are all the options in Service file.
-![Check Service Configuration file](screenshots/see-service-config-file.png)
+![Check Service Configuration file](Screenshots/see-service-config-file.png)
