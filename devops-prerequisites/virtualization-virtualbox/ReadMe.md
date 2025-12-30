@@ -1,4 +1,4 @@
-# **Virtual Box Introduction **
+# **Virtual Box Introduction**
 
 
 To setup your virtual laptop you have 2 options one is laptop (either office or home) and 2nd is Cloud. 
