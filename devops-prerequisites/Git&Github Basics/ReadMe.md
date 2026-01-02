@@ -17,9 +17,11 @@ It is a system which has a central repository that stores all the code and devel
 
 
 **Distributed VCS** 
+
 It is a system where every developer has a complete local copy of the entire project and they can work offline. 
 In DVCS each user has the mirroed copy of the entire entire project on their local machine.
 ![Distributed Version System](screenshots/DVCS.png)
+
 
 **Fork** 
 
@@ -66,9 +68,7 @@ It is a graphical user interface.
 **Note: This is my commit id:dbfcadcb7a45f2b2e3f6e400f26f13d3cd20ef8a**
 ![to go back to previous version](screenshots/reset.png)
 
-# Sharing a Local Git Project Using GitHub
-
-## Introduction
+## Sharing a Local Git Project Using GitHub
 
 We have created a **local copy of our project** using Git.  
 All files, commits, and version history currently exist **only on the local system**.
