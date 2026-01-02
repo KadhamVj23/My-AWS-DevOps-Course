@@ -126,6 +126,9 @@ The IP range is:
 10.0.0.254
 10.0.0.255 
 
+
+
+
 Generally **subnets** are of 2 types: 
 1. Private --> These subnets don't have direct access to internet
 2. Public  --> These subnets have direct access to internet
