@@ -282,6 +282,7 @@ git push origin dev
 ```
 
 After this you can see that **dev** branch is now reflected in github like this:
+
 ![Dev branch is commited Now](screenshots/dev-branch-commit.png)
 
 ### Merging Concept:
@@ -295,4 +296,25 @@ After the **dev** branch is commited to github, now lets merge this to **master*
 **Compare** → the branch which you want to merge
 
 In my case **Base->master** and **Compare->dev**
+
 ![Pull request](screenshots/pull-req.png)
+
+3. Click on **Create Pull Request**
+4. After this the main branch owner can accpet the merge pull request and merge the **dev** branch to master.
+
+---
+**Note:** 
+
+# Git Fetch and Git Pull – Simple Notes
+
+In Git, `fetch` and `pull` are used to get updates from a remote repository, but they work in different ways.
+
+`git fetch` is used to download all the latest updates and new branches from the remote repository. It stores these updates in remote-tracking branches such as `origin/main` or `origin/dev`. This command does not change any local branches and does not affect the working directory. It is mainly used when we want to see what changes are available on the remote without applying them to our local code.
+
+`git pull` is used when we want to update our local branch with the latest changes from the remote repository. It first fetches the updates and then merges them into the current local branch. This means our local code gets updated with the remote changes.
+
+In simple terms, `git fetch` lets us check what has changed, while `git pull` actually brings those changes into our local branch.
+
+`git fetch` is safe to use anytime, but `git pull` should be used when we are ready to merge remote changes into our local work.
+
+---
