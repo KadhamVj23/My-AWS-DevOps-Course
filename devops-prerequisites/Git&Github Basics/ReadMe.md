@@ -261,3 +261,38 @@ So in conclusion,
 - dev → is for Development or testing work
 - Changes are merged into main only when ready
 
+**HEAD** in git is nothing but a **latest commit.** To see where is the head use this command:
+```bash
+git log
+```
+
+Now, lets say we want to merge our **dev** branch with **master** branch. How can we do that?
+
+Lets see the process below:
+
+type 
+```bash
+git branch
+```
+
+to check if you are in your dev branch or not if not switch to your dev branch. Then type the following:
+
+```bash
+git push origin dev
+```
+
+After this you can see that **dev** branch is now reflected in github like this:
+![Dev branch is commited Now](screenshots/dev-branch-commit.png)
+
+### Merging Concept:
+
+After the **dev** branch is commited to github, now lets merge this to **master** branch. To do so, follow the below steps:
+
+1. Go to **Pull Request**
+2. Click on **New pull request**. You will see these options here: **base** and **Compare**. 
+
+**Base** → the branch into which you want to merge 
+**Compare** → the branch which you want to merge
+
+In my case **Base->master** and **Compare->dev**
+![Pull request](screenshots/pull-req.png)
