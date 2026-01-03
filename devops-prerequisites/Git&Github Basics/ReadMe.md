@@ -55,15 +55,15 @@ It is a graphical user interface.
 5. To restore the deleted file: **git restore filename**
 ![Restore the deleted file](screenshots/restore.png)
 
-4. To know the exact changes made to the file: **git diff**
+6. To know the exact changes made to the file: **git diff**
 ![To know changes made to the file](screenshots/diff.png)
 
-5. To keep track of the version changes you need to commit it: **git commit -m "This is my 1st version of app"**
+7. To keep track of the version changes you need to commit it: **git commit -m "This is my 1st version of app"**
 ![To Keep track of version chanages](screenshots/commit.png)
 
-6. To know your versions of your code: **git log**
+8. To know your versions of your code: **git log**
 ![To know the versions of your file](screenshots/log.png)
-7. To go back to the previous version(keep the commit id from git log handy): **git reset --hard dbfcadcb7a45f2b2e3f6e400f26f13d3cd20ef8a
+9. To go back to the previous version(keep the commit id from git log handy): **git reset --hard dbfcadcb7a45f2b2e3f6e400f26f13d3cd20ef8a
 
 **Note: This is my commit id:dbfcadcb7a45f2b2e3f6e400f26f13d3cd20ef8a**
 ![to go back to previous version](screenshots/reset.png)
@@ -122,4 +122,142 @@ Skip step 4 if you know how to create PAT:
 
 Now you can push the local commits to github using **git push origin master**
 
-We are using **master** since it was in our local repo, in the next topic we will learn about **master and main branch.**
+**Note:** To pull the code from github to your local machine use: **git pull origin master**
+
+We are using **master** since it was in our local repo, in the next topic we will learn about **branches** to understand more about it.
+
+## **Branches and Branching Concept**
+
+
+### **Branch:**
+
+A **branch** is a separate line of work in a Git repository.
+
+It allows developers to:
+- Work on new features
+- Fix bugs
+- Experiment with changes  
+
+without affecting the main code.
+
+---
+
+### Why Do We Use Branches?
+
+Branches help to:
+- Keep the main code stable
+- Allow multiple people to work at the same time
+- Test changes safely before merging
+
+---
+
+### Default (Root) Branch
+
+The **default branch** (also called the root branch) is the main branch of the repository.
+
+Today, the default branch is usually called **main**
+
+Earlier it was commonly called **master**
+
+---
+
+## Local Repository vs GitHub Repository
+
+### Local Repository
+- When a repository is created locally using `git init`:
+  - Older Git versions → default branch is `master`
+  - Newer Git versions → default branch is `main`
+
+
+### GitHub Repository
+- When a repository is created on GitHub:
+  - The default branch is **`main`**
+- When you clone it, your local repository will also have `main`
+
+
+---
+
+### Important Note
+
+> The branch name (`main` or `master`) depends on Git’s default configuration,  
+> not on whether the repository is local or on GitHub.
+
+---
+
+
+### Best Practice
+
+- Use **`main`** as the default branch
+- Create separate branches for features and bug fixes
+- Merge changes back into `main` after testing
+
+---
+
+
+### One-Line Summary
+
+A branch is an independent line of development, and the default branch is commonly called `main`, previously known as `master`.
+
+Git allows us to create **multiple branches** so that we can work on different changes **without affecting the main code**.
+
+Each branch is an **independent line of development** as explained above.
+
+
+---
+
+### Default Branch (Main / Master)
+
+- When a repository is created, it has a default (root) branch
+- This branch is usually called:
+  - `main` (modern standard)
+  - `master` (older naming)
+
+This branch contains the **stable version of the project**.
+
+---
+
+## Creating a New Branch
+
+To create a new branch called `dev`, use:
+
+```bash
+git branch dev
+
+```
+
+### What happened above:
+
+- A new branch named dev is created
+- dev is an exact copy of the current branch (main/master)
+- You are still on the main branch after this command
+
+---
+
+### Switching to the Dev Branch
+
+To move from the main branch to the **dev* branch, use:
+
+```bash
+git switch dev
+```
+Now you are working inside **dev** branch.
+
+To see which branch you are on: 
+```bash
+git branch
+```
+
+The branch with **stark(*)** indicates the current active branch.
+
+After creating this **dev** branch you can make any modifications, or cretae any fiels in this branch and this will not affect the **main branch**
+
+Now lets create a new file in this dev branch called **this-is-dev-branch-file.txt**
+
+Now add this file and commit it and you can see the file in your dev branch, but when you will switch back to your **master** branch you will not see the file which we created in **dev** branch.
+
+So in conclusion,
+
+- main/master → is a Stable / production-ready code
+- dev → is for Development or testing work
+- Changes are merged into main only when ready
+
