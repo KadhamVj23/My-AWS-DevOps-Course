@@ -1,6 +1,4 @@
-# AWS Basics for DevOps
-
-## What is Cloud Computing?
+# What is Cloud Computing?
 
 **Cloud Computing** is like renting computing services like: storage, softwares, databases, servers over the internet instead of owning or maintaining your physical hardware.
 
