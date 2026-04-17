@@ -103,6 +103,10 @@ Note: **Tags** are key-value pairs that are added by the person who is managing 
 5. After this you will be able to **create the S3 bucket** for this created user.
 
 
+## Best Practises:
+1. Never use the **root user** always create a user with admin rights and then use it.
+
+
 ## Creating User Group:
 
 1. Go to AWS Home Page -> search for IAM -> In Access Management select **User Groups**

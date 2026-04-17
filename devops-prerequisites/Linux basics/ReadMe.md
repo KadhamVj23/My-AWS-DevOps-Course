@@ -114,3 +114,80 @@ Here **`-O`** is used to save the file in local machine.
 To check the current OS type: **`ls /etc/*release*`**
 
 To view more OS files type: **`cat /etc/*release*`**
+
+
+# ** Hands-on Linux Commands for practice
+
+1. **Create a tarball** of the directory called python and **compress it using gzip.**
+
+The compressed tar file should be available at **/home/bob/python.tar.gz.**
+
+***Note: If you see a message like tar: Removing leading '/' from member names, it's just a warning and can be safely ignored.***
+
+Use this image for reference:
+![Image](img/caleston_dir5.png)
+
+In command prompt type:
+
+**`tar -cf /home/bob/python.tar /home/bob/reptile/snake/python`**
+
+You will then get a message like this: tar: Removing leading `/' from member names
+
+Then type: **`gzip /home/bob/python.tar`**
+
+
+2. There is a compressed file called **eaglet.dat.gz** located under the **/home/bob/birds/eagle** directory.
+
+**Extract** it in the same location.
+
+**`gunzip /home/bob/birds/eagle/eaglet.dat.gz`**
+
+3. Bob stored the caleston-code file somewhere in /opt folder. can you find it?
+
+**`sudo find /opt -name caleston-code`**
+
+It will ask you for the user's pwd provide the pwd and the location of the file will be displayed.
+
+
+4. Find the **location of the file called dummy.service within the /etc filesystem** and redirect its absolute path to the file located at **/home/bob/dummy-service.**
+
+
+You can use the redirect operator with the echo command to save the answer to the file.
+
+Run the command **`sudo find /etc -name dummy.service.`**
+
+Then, use the command **`echo /etc/systemd/system/dummy.service > /home/bob/dummy-service.`**
+
+
+5. Find the file under **/etc** directory that contains the string **172.16.238.197.** Save the answer using the absolute path in the **file /home/bob/ip.**
+
+Run this command: **`sudo grep -ir 172.16.238.197 /etc/ > /home/bob/ip`**
+
+
+6. Create a new file at the path **/home/bob/file_with_data.txt.** The content of this file should consist of a single line of text that states: **a file in my home directory.**
+
+Make use of the **redirect(>)** operator.
+
+Run this command: **`echo "a file in my home directory" > /home/bob/file_with_data.txt`**
+
+
+7. Run the command **python3 /home/bob/my_python_test.py** and redirect the standard error to the file **/home/bob/py_error.txt.**
+
+The file /home/bob/my_python_test.py does not exist.
+Focus on capturing the error message using the 2> operator.
+
+Run the following command:
+**`python3 /home/bob/my_python_test.py`**
+
+You will get an error message because no such file exists. Now to save thos error message in a file execute the below command:
+
+**`python3 /home/bob/my_python_test.py 2> /home/bob/py_error.txt`**
+
+**python3 /home/bob/my_python_test.py** → tries to run a Python file (which doesn’t exist)
+**2>** → redirects error output (stderr)
+**/home/bob/py_error.txt** → file where the error message will be saved
+
+
+8. Read the file **/usr/share/man/man1/tail.1.gz** and, without extracting it, redirect its contents to a file called **/home/bob/pipes.**
+
+**`zcat /usr/share/man/man1/tail.1.gz | tee /home/bob/pipes`**
